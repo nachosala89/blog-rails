@@ -1,24 +1,54 @@
-# README
+# Blog Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This project consists of a classic example of a blog website. It shows the list of posts and empower readers to interact with them by adding comments and liking posts. It's mainly built with Ruby on Rails.
 
-Things you may want to cover:
+## Built With
 
-* Ruby version
+- Ruby
+- Ruby on Rails
+- CSS
 
-* System dependencies
+## Getting Started
 
-* Configuration
+### Prerequisites
+- Ruby >= 3.0.0
 
-* Database creation
+### Setup
 
-* Database initialization
+- Run git clone on this project at the desired directory:
+   ```
+   git clone https://github.com/nachosala89/blog-rails.git
+   ```
+- Go to the cloned directory with `cd blog-rails`.
+- Install dependencies with bundle install.
+- install RSpec on your system with `gem install rspec`.
 
-* How to run the test suite
+### Run the program
+- Follow the setup instructions.
+- Make sure you're inside the correct directory `blog-rails`.
+- Run `bin/rails server` on the terminal to start Puma server.
+- In your browser, go to `http://127.0.0.1:3000` to interact with the site.
 
-* Services (job queues, cache servers, search engines, etc.)
+### Tests
 
-* Deployment instructions
+- With RSpec installed in your environment, you can just run `rspec` to run the tests.
 
-* ...
+## Authors
+
+👤 **Nacho Sala**
+
+- GitHub: [@nachosala89](https://github.com/nachosala89)
+- Twitter: [@nachosala89](https://twitter.com/nachosala89)
+- LinkedIn: [Juan Ignacio Sala](https://www.linkedin.com/in/nacho-sala)
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
