@@ -1,0 +1,9 @@
+<ul>
+    <% unless post.comments.empty? %>
+      <% post.comments.each do |comment| %>
+        <li>
+          <span><%= comment.author.name %>: <%= comment.text %></span>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>

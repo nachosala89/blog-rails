@@ -1,1 +1,8 @@
-<h1>This is the detail page for the post <%= @post_id %> of the user <%= @user_id %></h1>
+<div>
+  <div>
+    <h3>Post #<%= @post.id %> by <%= @post.author.name %></h3>
+    <span>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></span>
+  </div>
+  <p><%= @post.text %></p>
+</div>
+<%= render partial: "shared/comments", locals: { post: @post } %>
