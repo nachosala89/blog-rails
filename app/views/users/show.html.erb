@@ -1,1 +1,8 @@
-<h1>This is the detail page for the user <%= @id %></h1>
+<%= render partial: "shared/user", locals: { user: @user } %>
+<div>
+  <h3>Bio</h3>
+  <p><%= @user.bio %></p>
+</div>
+<% @posts.each do |post| %>
+  <%= render partial: "shared/post", locals: { post: post } %>
+<% end %>

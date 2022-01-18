@@ -1,1 +1,5 @@
-<h1>This is the posts list page for the user <%= @id %></h1>
+<%= render partial: "shared/user", locals: { user: @user } %>
+<% @posts.each do |post| %>
+  <%= render partial: "shared/post", locals: { post: post } %>
+  <%= render partial: "shared/comments", locals: { post: post } %>
+<% end %>
