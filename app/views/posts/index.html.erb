@@ -2,4 +2,6 @@
 <% @posts.each do |post| %>
   <%= render partial: "shared/post", locals: { post: post } %>
   <%= render partial: "shared/comments", locals: { post: post } %>
+  <%= link_to 'New Comment', new_comment_path(post.id) %>
 <% end %>
+<%= link_to 'New Post', new_post_path %>
