@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   post '/posts', to: 'posts#create', as: "create_post"
   get "/posts/:id/comments/new", to: "comments#new", as: "new_comment"
   post '/posts/:id/comments', to: 'comments#create', as: "create_comment"
+  get '/posts/:id/likes', to: 'likes#create', as: "create_like"
 end
