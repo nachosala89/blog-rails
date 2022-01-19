@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:id])
     comment = Comment.new
     respond_to do |format|
-      format.html { render :new, locals: { comment: comment } }
+      format.html { render :new, locals: { comment: } }
     end
   end
 
@@ -16,11 +16,11 @@ class CommentsController < ApplicationController
     respond_to do |format|
       format.html do
         if comment.save
-          flash[:success] = "Comment saved successfully"
+          flash[:success] = 'Comment saved successfully'
           redirect_to posts_url(user.id)
         else
-          flash.now[:error] = "Error: Comment could not be saved"
-          render :new, locals: { comment: comment }
+          flash.now[:error] = 'Error: Comment could not be saved'
+          render :new, locals: { comment: }
         end
       end
     end

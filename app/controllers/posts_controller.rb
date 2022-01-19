@@ -11,7 +11,7 @@ class PostsController < ApplicationController
   def new
     post = Post.new
     respond_to do |format|
-      format.html { render :new, locals: { post: post} }
+      format.html { render :new, locals: { post: } }
     end
   end
 
@@ -22,15 +22,15 @@ class PostsController < ApplicationController
     post.comments_counter = 0
     post.likes_counter = 0
     respond_to do |format|
-        format.html do
-            if post.save
-                flash[:success] = "post saved successfully"
-                redirect_to posts_url(user.id)
-            else
-                flash.now[:error] = "Error: Post could not be saved"
-                render :new, locals: { post: post }
-            end
+      format.html do
+        if post.save
+          flash[:success] = 'post saved successfully'
+          redirect_to posts_url(user.id)
+        else
+          flash.now[:error] = 'Error: Post could not be saved'
+          render :new, locals: { post: }
         end
+      end
     end
   end
 end
