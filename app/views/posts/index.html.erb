@@ -1,3 +1,6 @@
+<% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+    <% end -%>
 <%= render partial: "shared/user", locals: { user: @user } %>
 <% @posts.each do |post| %>
   <%= render partial: "shared/post", locals: { post: post } %>
